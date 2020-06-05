@@ -27,5 +27,16 @@ let GameManager = {
     getHeader.innerHTML = '<p>Task: Find a rap foe!</p>';
     getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="GameManager.setBattle()">Search for rap foe.</a>';
     getStage.style.visibility = "visible";
+  },
+  setBattle: function() {
+    let getHeader = document.querySelector(".header");
+    let getActions = document.querySelector(".actions");
+    let getFoe = document.querySelector(".foe");
+    // need to create enemy
+    let foeOne = new RapFoe("Papa Doc aka Clarence", 100, 25, 50, 50);
+    let foeTwo = new RapFoe("Lil B", 150, 75, 65, 55);
+    let chooseRandomFoe = Math.floor(Math.random() * Math.floor(2));
+    console.log(chooseRandomFoe); 
+
   }
 }
