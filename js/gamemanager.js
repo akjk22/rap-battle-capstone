@@ -33,8 +33,8 @@ let GameManager = {
     let getActions = document.querySelector(".actions");
     let getFoe = document.querySelector(".foe");
     // need to create enemy
-    let foeZero = new Foe("Papa Doc aka Clarence", 100, 25, 50, 50);
-    let foeOne = new Foe("Lil B", 150, 75, 65, 55);
+    let foeZero = new Foe("Papa Doc aka Clarence", 100, 25, 50, 50, 80);
+    let foeOne = new Foe("Lil B", 150, 75, 65, 55, 60);
     let chooseRandomFoe = Math.floor(Math.random() * Math.floor(2));
     console.log(chooseRandomFoe); 
     switch (chooseRandomFoe) {
