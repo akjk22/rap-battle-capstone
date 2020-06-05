@@ -17,7 +17,7 @@ let GameManager = {
     }
     //grab interface so we can change it upon rapper selection
     let getInterface = document.querySelector(".interface");
-    getInterface.innerHTML = '<img src="img/avatar/' + rapStyle.toLowerCase() + '.png" class="img-avatar"><div><h3>' + rapStyle + '</h3><p>HP: ' + rapper.hp + '</p><p>Special: ' + rapper.special + '</p><p>Strength: ' + rapper.strength + '</p><p>Wordplay: ' + rapper.wordplay + '</p><p>Delivery: ' + rapper.delivery + '</p></div>';
+    getInterface.innerHTML = '<img src="img/avatar/' + rapStyle.toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + rapStyle + '</h3><p>HP: ' + rapper.hp + '</p><p>Special: ' + rapper.special + '</p><p>Strength: ' + rapper.strength + '</p><p>Wordplay: ' + rapper.wordplay + '</p><p>Delivery: ' + rapper.delivery + '</p></div>';
   },
   setPreBattle: function() {
     let getHeader = document.querySelector(".header");
@@ -47,6 +47,6 @@ let GameManager = {
     }
     getHeader.innerHTML = '<p>Task: DJ Spin That Shit!</p>';
     getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="RapperMoves.calcAttack()">Spit Your Bars!</a>';
-    getFoe.innerHTML = '<img src="img/avatar2/' + foe.rapStyle.toLowerCase() + '.png" alt="' + foe.rapStyle + '" class="img-avatar"><div><h3>' + foe.rapStyle + '</h3><p class="health-foe">HP: ' + foe.hp + '</p><p>Special: ' + foe.special + '</p><p>Strength: ' + foe.strength + '</p><p>Wordplay: ' + foe.wordplay + '</p><p>Delivery: ' + foe.delivery + '</p></div>';
+    getFoe.innerHTML = '<img src="img/avatar-foes/' + foe.rapStyle.toLowerCase() + '.png" alt="' + foe.rapStyle + '" class="img-avatar"><div><h3>' + foe.rapStyle + '</h3><p class="health-foe">HP: ' + foe.hp + '</p><p>Special: ' + foe.special + '</p><p>Strength: ' + foe.strength + '</p><p>Wordplay: ' + foe.wordplay + '</p><p>Delivery: ' + foe.delivery + '</p></div>';
   }
 }

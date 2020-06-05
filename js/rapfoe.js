@@ -7,5 +7,4 @@ function Foe(rapStyle, hp, special, strength, wordplay, delivery) {
   this.strength = strength;
   this.wordplay = wordplay;
   this.delivery = delivery;
-
 }
