@@ -24,6 +24,8 @@ let GameManager = {
     let getActions = document.querySelector(".actions");
     let getStage = document.querySelector(".stage");
 
-    getHeader.innerHTML = '<p>Task: Find a rap foe!</p>'
+    getHeader.innerHTML = '<p>Task: Find a rap foe!</p>';
+    getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="GameManager.setBattle()">Search for rap foe.</a>';
+    getStage.style.visibility = "visible";
   }
 }
