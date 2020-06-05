@@ -1,6 +1,6 @@
-let rapFoe;
+let foe;
 
-function RapFoe(rapStyle, hp, special, strength, wordplay, delivery) { 
+function Foe(rapStyle, hp, special, strength, wordplay, delivery) { 
   this.rapStyle = rapStyle;
   this.hp = hp;
   this.special = special;

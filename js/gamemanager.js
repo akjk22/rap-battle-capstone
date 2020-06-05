@@ -33,10 +33,20 @@ let GameManager = {
     let getActions = document.querySelector(".actions");
     let getFoe = document.querySelector(".foe");
     // need to create enemy
-    let foeOne = new RapFoe("Papa Doc aka Clarence", 100, 25, 50, 50);
-    let foeTwo = new RapFoe("Lil B", 150, 75, 65, 55);
+    let foeZero = new Foe("Papa Doc aka Clarence", 100, 25, 50, 50);
+    let foeOne = new Foe("Lil B", 150, 75, 65, 55);
     let chooseRandomFoe = Math.floor(Math.random() * Math.floor(2));
     console.log(chooseRandomFoe); 
-
+    switch (chooseRandomFoe) {
+      case 0: 
+        foe = foeZero;
+        break;
+      case 1: 
+        foe = foeOne;
+        break;
+    }
+    getHeader.innerHTML = '<p>Task: DJ Spin That Shit!</p>';
+    getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="RapperMoves.calcAttack()">Spit Your Bars!</a>';
+    getFoe.innerHTML = '<img src="img/avatar2/' + foe.rapStyle.toLowerCase() + '.png" alt="' + foe.rapStyle + '" class="img-avatar"><div><h3>' + foe.rapStyle + '</h3><p class="health-foe">HP: ' + foe.hp + '</p><p>Special: ' + foe.special + '</p><p>Strength: ' + foe.strength + '</p><p>Wordplay: ' + foe.wordplay + '</p><p>Delivery: ' + foe.delivery + '</p></div>';
   }
 }
