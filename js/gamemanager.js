@@ -17,9 +17,13 @@ let GameManager = {
     }
     //grab interface so we can change it upon rapper selection
     let getInterface = document.querySelector(".interface");
-    getInterface.innerHTML = '<img src="">';
+    getInterface.innerHTML = '<img src="img/avatar/' + rapStyle.toLowerCase() + '.png" class="img-avatar"><div><h3>' + rapStyle + '</h3><p>HP: ' + rapper.hp + '</p><p>Special: ' + rapper.special + '</p><p>Strength: ' + rapper.strength + '</p><p>Wordplay: ' + rapper.wordplay + '</p><p>Delivery: ' + rapper.delivery + '</p></div>';
   },
   setPreBattle: function() {
+    let getHeader = document.querySelector(".header");
+    let getActions = document.querySelector(".actions");
+    let getStage = document.querySelector(".stage");
 
+    getHeader.innerHTML = '<p>Task: Find a rap foe!</p>'
   }
 }
