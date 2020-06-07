@@ -45,7 +45,7 @@ let GameManager = {
         foe = foeOne;
         break;
     }
-    getHeader.innerHTML = '<p>Task: DJ Spin That Shit!</p>';
+    getHeader.innerHTML = '<p>Task: Start Rapping!</p>';
     getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="RapperMoves.calcAttack()">Spit Your Bars!</a>';
     getFoe.innerHTML = '<img src="img/avatar-foes/' + foe.rapStyle.toLowerCase() + '.png" alt="' + foe.rapStyle + '" class="img-avatar"><div><h3>' + foe.rapStyle + '</h3><p class="hp-foe">HP: ' + foe.hp + '</p><p>Special: ' + foe.special + '</p><p>Strength: ' + foe.strength + '</p><p>Wordplay: ' + foe.wordplay + '</p><p>Delivery: ' + foe.delivery + '</p></div>';
   }
