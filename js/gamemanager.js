@@ -24,9 +24,13 @@ let GameManager = {
     let getActions = document.querySelector(".actions");
     let getStage = document.querySelector(".stage");
 
-    getHeader.innerHTML = '<p>Task: Find a rap foe!</p>';
+    getHeader.innerHTML = '<p onload="GameManager.setSong()">Task: Find a rap foe!</p>';
     getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="GameManager.setBattle()">Search for rap foe.</a>';
     getStage.style.visibility = "visible";
+  },
+  setSong: function() {
+    let introSong = document.querySelector(".intro");
+    introSong.stop();
   },
   setBattle: function() {
     let getHeader = document.querySelector(".header");
