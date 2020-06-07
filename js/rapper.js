@@ -45,31 +45,33 @@ let RapperMoves = {
       let attackValues = [calcOutputDamage, numberOfHits];
       return attackValues; 
     }
-    //get rapper and foe health to change later
-    let getRapperHealth = document.querySelector(".health-rapper");
-    let getFoeHealth = document.querySelector(".healh-foe");
+    //get rapper and foe HP to change later
+    let getRapperHp = document.querySelector(".hp-rapper");
+    let getFoeHp = document.querySelector(".hp-foe");
     //initiate attacks
     if (getRapperSpecial >= getFoeSpecial) {
       let rapperAttackValues = rapperAttack();
       let totalDamage = rapperAttackValues[0] * rapperAttackValues[1];
-      foe.health = foe.health - totalDamage;
+      foe.hp = foe.hp - totalDamage;
       alert("You hit " + rapperAttackValues[0] + " damage " + rapperAttackValues[1] + " times.");
-      if (foe.health <= 0) {
+      if (foe.hp <= 0) {
         alert("You have outrapped your foe! Refresh the browser to play again."); 
-        getRapperHealth.innerHTML = 'HP: ' + rapper.health;
-        getRapperHealth.innerHTML = 'HP: 0';
+        getRapperHp.innerHTML = 'HP: ' + rapper.hp;
+        getFoeHp.innerHTML = 'HP: 0';
       } else {
-        getFoeHealth.innerHTML = 'HP: ' + foe.health;
+        getFoeHp.innerHTML = 'HP: ' + foe.hp;
         // foe attacks
         let foeAttackValues = foeAttack();
         let totalDamage = foeAttackValues[0] * foeAttackValues[1];
-        rapper.health = rapper.health - totalDamage;
+        rapper.hp = rapper.hp - totalDamage;
         alert("Foe hit " + foeAttackValues[0] + " damage " + foeAttackValues[1] + " times.");
-        if (rapper.health <= 0) {
+        if (rapper.hp <= 0) {
           alert("You lose! Refresh the browser to rap again."); 
-          getRapperHealth.innerHTML = 'HP: ' + rapper.health;
-          getRapperHealth.innerHTML = 'HP: 0';
-        } 
+          getRapperHp.innerHTML = 'HP: 0';
+          getFoeHp.innerHTML = 'HP: ' + foe.hp;
+        } else {
+          getRapperHp.innerHTML = 'HP: ' + rapper.hp;
+        }
       }
     }
   } 
