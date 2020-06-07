@@ -10,11 +10,18 @@ function Rapper(rapStyle, hp, special, strength, wordplay, delivery) {
   this.delivery = delivery;
 }
 
+function onload() {
+  let audio = document.getElementById("audio");
+  audio.play();
+}
+
 let RapperMoves = {
   calcAttack: function() {
     // who will attack first?
     let getRapperSpecial = rapper.special;
     let getFoeSpecial = foe.special;
+ 
+   
     // rapper attacks/spits bars
     let rapperAttack = function() {
       let calcBaseDamage;
@@ -48,6 +55,7 @@ let RapperMoves = {
     //get rapper and foe HP to change later
     let getRapperHp = document.querySelector(".hp-rapper");
     let getFoeHp = document.querySelector(".hp-foe");
+    let audio = document.getElementById("audio");
     //initiate attacks
     if (getRapperSpecial >= getFoeSpecial) {
       let rapperAttackValues = rapperAttack();
@@ -56,6 +64,7 @@ let RapperMoves = {
       alert("You hit " + rapperAttackValues[0] + " damage " + rapperAttackValues[1] + " times.");
       if (foe.hp <= 0) {
         alert("You have won the battle! Refresh the browser to play again."); 
+        audio.pause();
         getRapperHp.innerHTML = 'HP: ' + rapper.hp;
         getFoeHp.innerHTML = 'HP: 0';
       } else {
@@ -67,6 +76,7 @@ let RapperMoves = {
         alert("Foe hit " + foeAttackValues[0] + " damage " + foeAttackValues[1] + " times.");
         if (rapper.hp <= 0) {
           alert("You have lost the battle! Refresh the browser to rap again."); 
+          audio.pause();
           getRapperHp.innerHTML = 'HP: 0';
           getFoeHp.innerHTML = 'HP: ' + foe.hp;
         } else {

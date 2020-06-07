@@ -36,7 +36,6 @@ let GameManager = {
     let foeZero = new Foe("Papa Doc", 100, 25, 50, 50, 80);
     let foeOne = new Foe("Lil B", 150, 75, 65, 55, 60);
     let chooseRandomFoe = Math.floor(Math.random() * Math.floor(2));
-    console.log(chooseRandomFoe); 
     switch (chooseRandomFoe) {
       case 0: 
         foe = foeZero;
@@ -45,8 +44,8 @@ let GameManager = {
         foe = foeOne;
         break;
     }
-    getHeader.innerHTML = '<p>Task: Start Rapping!</p>';
-    getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="RapperMoves.calcAttack()">Spit Your Bars!</a>';
+    getHeader.innerHTML = '<p onload="onload()">Task: Start Rapping!</p><audio id="audio" src="audio/shook.mp3" autoplay="autoplay">';
+    getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="RapperMoves.calcAttack()">Spit Your Bars!</a> <audio id="audio" src="audio/shook.mp3"></audio>';
     getFoe.innerHTML = '<img src="img/avatar-foes/' + foe.rapStyle.toLowerCase() + '.png" alt="' + foe.rapStyle + '" class="img-avatar"><div><h3>' + foe.rapStyle + '</h3><p class="hp-foe">HP: ' + foe.hp + '</p><p>Special: ' + foe.special + '</p><p>Strength: ' + foe.strength + '</p><p>Wordplay: ' + foe.wordplay + '</p><p>Delivery: ' + foe.delivery + '</p></div>';
   }
 }
