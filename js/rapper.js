@@ -25,6 +25,9 @@ let RapperMoves = {
     }
     let offsetDamage = Math.floor(Math.random() * Math.floor(10));
     let calcOutputDamage = calcBaseDamage + offsetDamage; 
+    // number of hits
+    let numberOfHits = Math.floor(Math.random() * Math.floor(rapper.delivery/10) / 2) + 1;
+    
   }
   }
  
