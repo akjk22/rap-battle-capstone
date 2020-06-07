@@ -17,7 +17,7 @@ let GameManager = {
     }
     //grab interface so we can change it upon rapper selection
     let getInterface = document.querySelector(".interface");
-    getInterface.innerHTML = '<img src="img/avatar-rapper/' + rapStyle.toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + rapStyle + '</h3><p class="hp-rapper">HP: ' + rapper.hp + '</p><p>Special: ' + rapper.special + '</p><p>Strength: ' + rapper.strength + '</p><p>Wordplay: ' + rapper.wordplay + '</p><p>Delivery: ' + rapper.delivery + '</p></div>';
+    getInterface.innerHTML = '<img src="img/avatar-rapper/' + rapStyle.toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + rapStyle + '</h3><p class="hp-rapper">HP: ' + rapper.hp + '</p><p>Special: ' + rapper.special + '</p><p>Strength: ' + rapper.strength + '</p><p>Wordplay: ' + rapper.wordplay + '</p><p>Delivery: ' + rapper.delivery + '</p>';
   },
   setPreBattle: function() {
     let getHeader = document.querySelector(".header");

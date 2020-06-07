@@ -15,6 +15,10 @@ function onload() {
   audio.play();
 }
 
+$(document).ready(function() {
+  $("#audio-intro").get(0).play();
+});
+
 let RapperMoves = {
   calcAttack: function() {
     // who will attack first?
