@@ -55,7 +55,7 @@ let RapperMoves = {
       foe.hp = foe.hp - totalDamage;
       alert("You hit " + rapperAttackValues[0] + " damage " + rapperAttackValues[1] + " times.");
       if (foe.hp <= 0) {
-        alert("You have outrapped your foe! Refresh the browser to play again."); 
+        alert("You have won the battle! Refresh the browser to play again."); 
         getRapperHp.innerHTML = 'HP: ' + rapper.hp;
         getFoeHp.innerHTML = 'HP: 0';
       } else {
@@ -66,13 +66,37 @@ let RapperMoves = {
         rapper.hp = rapper.hp - totalDamage;
         alert("Foe hit " + foeAttackValues[0] + " damage " + foeAttackValues[1] + " times.");
         if (rapper.hp <= 0) {
-          alert("You lose! Refresh the browser to rap again."); 
+          alert("You have lost the battle! Refresh the browser to rap again."); 
           getRapperHp.innerHTML = 'HP: 0';
           getFoeHp.innerHTML = 'HP: ' + foe.hp;
         } else {
           getRapperHp.innerHTML = 'HP: ' + rapper.hp;
         }
       }
-    }
+    } else if (getFoeSpecial >= getRapperSpecial) {
+        let foeAttackValues = foeAttack();
+        let totalDamage = foeAttackValues[0] * foeAttackValues[1];
+        rapper.hp = rapper.hp - totalDamage;
+        alert("Enemy hit " + foeAttackValues[0] + " damage " + foeAttackValues[1] + " times.");
+        if (rapper.hp <= 0) {
+          alert("You have lost the battle! Refresh the browser to play again."); 
+          getFoeHp.innerHTML = 'HP: ' + foe.hp;
+          getRapperHp.innerHTML = 'HP: 0';
+        } else {
+          getRapperHp.innerHTML = 'HP: ' + rapper.hp;
+          // rapper attacks
+          let rapperAttackValues = rapperAttack();
+          let totalDamage = rapperAttackValues[0] * rapperAttackValues[1];
+          foe.hp = foe.hp - totalDamage;
+          alert("You hit " + rapperAttackValues[0] + " damage " + rapperAttackValues[1] + " times.");
+          if (foe.hp <= 0) {
+            alert("You have won the battle! Refresh the browser to rap again."); 
+            getFoeHp.innerHTML = 'HP: 0';
+            getRapperHp.innerHTML = 'HP: ' + rapper.hp;
+          } else {
+            getFoeHp.innerHTML = 'HP: ' + foe.hp;
+          }
+        }
+      }
   } 
 }
