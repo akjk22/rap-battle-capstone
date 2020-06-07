@@ -12,6 +12,7 @@ _This program will allow a user to select a rapper and will randomly generate on
 
 * _Git clone repo https://github.com/akjk22/rap-battle-capstone.git_
 * _Or view on gh-pages: https://akjk22.github.io/rap-battle-capstone/_
+*_Intro song on main page will not work on gh-pages. Remote project must be cloned. From there, use live browser add-on in VSCode._* 
 
 ## Support and contact details
 
