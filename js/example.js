@@ -8,10 +8,10 @@
 
 // fetchData()
 
-fetch("https://sridurgayadav-chart-lyrics-v1.p.rapidapi.com/apiv1.asmx/SearchLyricDirect?artist=michael%2520jackson&song=bad", {
+fetch("https://canarado-lyrics.p.rapidapi.com/lyrics/zenith%2520denzel%2520curry", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-host": "sridurgayadav-chart-lyrics-v1.p.rapidapi.com",
+		"x-rapidapi-host": "canarado-lyrics.p.rapidapi.com",
 		"x-rapidapi-key": "324b68028emsh2bdaa9e9f17a4efp16daedjsn355e4f3cbef3"
 	}
 })
