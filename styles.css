@@ -181,5 +181,58 @@ body {
   margin: 0 auto;
   font-size: 16px;
   max-width: 400px;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1019px) { 
+  .interface {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #1b1b1b;
+  }
+  
+  .interface a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .interface img {
+    width: 375px;
+    height: 375px;
+    margin-bottom: 20px;
+  }
+  
+  .img-avatar {
+    width: 375px !important;
+    height: 375px !important;
+  }
+  
+  .interface div {
+    width: 375px;
+    padding: 0 10px 0 20px;
+    background-color: #211510;
+    margin-bottom: 20px;
+  }
+  
+  .interface a:hover div {
+    background-color: #3c1d3d;
+  }
+  
+  .interface h3 {
+    font-family: 'Acme', sans-serif;
+    font-size: 22px;
+    color: #f8b700;
+    padding: 12px 0 4px;
+  }
+  
+  .interface p {
+    font-family: arial;
+    font-size: 12px;
+    color: #d5c8af;
+    line-height: 20px;
+  }
 }

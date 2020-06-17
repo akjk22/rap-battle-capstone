@@ -23,10 +23,12 @@ let GameManager = {
     let getHeader = document.querySelector(".header");
     let getActions = document.querySelector(".actions");
     let getStage = document.querySelector(".stage");
+    let getLyrics = document.querySelector("#lyrics");
 
     getHeader.innerHTML = '<p onload="GameManager.setSong()">Task: Find a rap foe!</p>';
     getActions.innerHTML = '<a href="#" class="btn-prebattle" onclick="GameManager.setBattle()">Search for rap foe.</a>';
     getStage.style.visibility = "visible";
+    getLyrics.innerHTML = "<div>YOOOO</div>"
   },
   setSong: function() {
     let introSong = document.querySelector(".intro");
