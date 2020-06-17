@@ -22,7 +22,14 @@ function fetchData() {
   }).then(response => {
     return response.json();
   }).then(data => {
-    console.log(data);
+    console.log(data.content);
+    const html = data.content.map(user => {
+      return `<p>Lyrics: ${user.lyrics}</p>`
+    }).join('');
+    console.log(html);
+   document.querySelector('#lyrics').insertAdjacentHTML('afterbegin', html);
+  }).catch(error => {
+    console.log(error);
   });
 }
 

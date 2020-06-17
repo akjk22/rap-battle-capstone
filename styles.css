@@ -120,6 +120,7 @@ body {
 
 .stage {
   width: 100%;
+  max-width: 1440px;
   height: 180px;
   background-color: #1d373d;
   background-image: url("img/arena-bg.jpg");
@@ -170,4 +171,12 @@ body {
   font-size: 12px;
   color: #d5c8af;
   line-height: 20px;
+}
+
+#lyrics {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 400px;
+  margin-top: 30px;
 }
