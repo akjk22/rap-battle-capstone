@@ -85,6 +85,8 @@ body {
 
 .btn-prebattle {
   width: 100% !important;
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .actions {
@@ -120,8 +122,9 @@ body {
 
 .stage {
   width: 100%;
-  max-width: 1440px;
   height: 180px;
+  max-width: 375px;
+  margin: 0 auto;
   background-color: #1d373d;
   background-image: url("img/arena-bg.jpg");
   background-position: center;
