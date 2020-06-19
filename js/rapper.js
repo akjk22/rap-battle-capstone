@@ -11,7 +11,7 @@ function Rapper(rapStyle, hp, special, strength, wordplay, delivery) {
 }
 
 function onload() {
-  let audio = document.getElementById("audio");
+  let audio = document.querySelector(".intro");
   audio.play();
 }
 
@@ -52,11 +52,11 @@ let RapperMoves = {
       let attackValues = [calcOutputDamage, numberOfHits];
       return attackValues; 
     }
-    //get rapper and foe HP to change later
+    //get rapper and foe HP to change
     let getRapperHp = document.querySelector(".hp-rapper");
     let getFoeHp = document.querySelector(".hp-foe");
     let audio = document.getElementById("audio");
-    //initiate attacks
+    //initiate who attacks first
     if (getRapperSpecial >= getFoeSpecial) {
       let rapperAttackValues = rapperAttack();
       let totalDamage = rapperAttackValues[0] * rapperAttackValues[1];

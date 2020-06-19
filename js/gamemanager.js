@@ -32,7 +32,7 @@ let GameManager = {
   },
   setSong: function() {
     let introSong = document.querySelector(".intro");
-    introSong.stop();
+    introSong.stop();  
   },
   setBattle: function() {
     let getHeader = document.querySelector(".header");
@@ -46,7 +46,7 @@ let GameManager = {
       case 0: 
         foe = foeZero;
         break;
-      case 1: 
+      case 1:  f
         foe = foeOne;
         break;
     }
